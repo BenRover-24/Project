@@ -1,0 +1,502 @@
+* { 
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+h1, h2 {
+    font-family: "Ojuju", sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    
+}
+
+h3, h4 {
+    font-family: "Jost", sans-serif;  
+    font-weight: 600;
+}
+
+p {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background-color: black;
+    color: #fff;
+}
+
+.navbar.navbar {
+    padding: 5px 25px;
+    border-bottom: 1.5px solid #fff; 
+    border-radius: 0px 0px 10px 10px;   
+} 
+
+#navbarNav {
+    margin-bottom: 0px;
+}
+
+.hero {
+    background-image: url("ressources/images/iStock-1365125708-scaled.jpg");
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    position: relative;
+
+}
+
+.hero-text {
+    text-align: left;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero, .hero-sponsor {
+        height: 50vh;
+    }
+  }
+  
+@media (max-width: 767px) {
+    .hero, .hero-sponsor {
+        height: 50vh;
+    }
+  }
+
+/* -- Sponsor -- */ 
+.hero-sponsor {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("ressources/images/Team.webp");
+    /* background-color: rgba(0, 0, 0, 0.5); Black with 50% opacity */
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    position: relative;
+}
+
+.hero-text-sponsor {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text-sponsor > h1 {
+    font-size: 3rem;
+}
+
+/*---------------*/
+
+.hero-text > h1, h3 {
+    padding-bottom: 30px;
+}
+
+
+.hero-text > .btn { 
+    margin-top: 10px;
+    padding: 8px 25px;
+    border-radius: 30px;
+
+}
+
+.main > .container-fluid { 
+        background-color: black;
+        color: white;
+        padding: 30px 35px;      
+}
+
+.AboutProject, .Goals, .AboutTeam, .Sponsor  {
+    margin-bottom: 20px;
+}
+
+.AboutProject > h2, .Goals > h2, .AboutTeam > h2, .Sponsor > h2, .AboutMars > h2 {
+    vertical-align: middle;
+    align-self: start;
+    margin-bottom: 20px;
+}
+
+.ProjecContent, .GoalsContent, .mars-image, .SponsorContent, .Medias, footer {
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: space-evenly;
+}
+
+.ProjecContent > * {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.ProjecContent p {
+    text-align: justify;
+}
+
+@media (max-width: 767px) {
+    .ProjecContent p {
+        margin-top: 10px;
+    }    
+  }
+
+
+.ProjecContent > img {
+    width: 35%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.GoalsContent > div:first-of-type > p {
+    margin-top: 10px;
+}
+
+.GoalsContent > div:first-of-type, .mars-image > div:first-of-type {
+    flex: 3;
+    margin-right: 10px;
+}
+
+.GoalsContent > div:first-of-type > img, .mars-image > div:first-of-type > img {
+    width: 100%;
+}
+
+.GoalsContent p {
+    text-align: justify;
+}
+
+.GoalsDescription, .mars-text {
+    flex: 1.5;
+}
+
+.GoalsDescription > img {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.AboutMars {
+    margin: 20px 0;
+}
+
+.mars-image > div {
+    padding: 0 20px;
+}
+
+.mars-text {
+    text-align: justify;
+  }
+ 
+.mars-text p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+table tr {
+    border-bottom: 1pt solid rgba(255, 255, 255, .3);
+}
+
+table.data td:first-child {
+    text-align: left;
+}
+
+table.data td {
+    text-align: right;
+}
+
+table.data td span {
+    color: #868686;
+}
+
+/* -- Responsive -- */ 
+@media (min-width: 768px) and (max-width: 991px) {
+    .GoalsContent > div:first-of-type, .mars-image > div:first-of-type {
+        flex: 1.5;
+        margin-right: 10px;
+        align-self: center;
+    }
+    .GoalsDescription, .mars-text {
+        flex: 1.5;
+    }  
+    
+    .GoalsContent > div:first-of-type > img, .mars-image > div:first-of-type > img {
+        width: 100%;
+        height: 30vh;
+    }    
+    
+  }
+  
+  @media (max-width: 767px) {
+    .GoalsContent, .mars-image {
+      flex-flow: column;
+    }
+    .mars-text h4 {
+        text-align: center;
+    }
+  }
+
+.TeamDescription {
+    text-align: center;
+    margin: 15px;
+}
+
+
+.card-body > h5, h6 {
+    text-align: center;
+}
+
+.card-body p {
+    text-align: justify;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    /*margin: 5px 0 10px 0;*/
+}
+
+.card-footer img {
+    height: 35px;
+    width: 35px;
+    align-items: center;
+    margin-right: 10px;
+    /*margin-top: 5px; */
+    border-radius: 5px;
+}
+
+
+.SponsorContent > img {
+    flex: 3;
+    margin-bottom: 10px;
+    width: 65%; 
+    border-radius: 10px;
+}
+
+.CallSponsors {
+    flex: 2;
+    margin: 0 15px; 
+    text-align: justify;
+    align-self: center;
+}
+
+.Description {
+    text-align: justify;
+    margin: 1rem 0;
+}
+
+.OurSponsors h3 {
+    text-align: center;
+    padding: 15px;
+}
+
+.SponsorContainer {
+    display: flex; 
+    flex-flow: row wrap;
+    margin: 10px;
+}
+
+.SponsorContainer > .sponsor-image {
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SponsorContainer .sponsor-image:not(:last-of-type) {
+    margin-right: 15px;
+}
+
+.sponsor-image img {
+    width: 85%; 
+    vertical-align: middle;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .sponsor-image img {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .sponsor-image img {
+      width: 100%;
+    }
+  }
+
+
+.Medias {
+    align-items: center;
+}
+.Media h2 {
+    margin: 20px;
+    text-align: center;
+}
+
+.Medias img {
+    flex: 1;
+    margin: 5px;
+    width: 24%;
+    height: 60%;
+    border-radius: 5px;
+}
+
+.RefDoc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    font-style: italic;
+}
+.RefDoc a {
+    margin-left: 10px;
+    vertical-align: middle;
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .Medias img {
+      width: 48%;
+    }
+  }
+  
+@media (max-width: 767px) {
+    .Medias img {
+      width: 40%;
+    }
+  }
+  
+ 
+/* ----- Footer ------- */
+footer {
+    align-items: center;
+    background-color: #212529;
+    color:#fff;
+    /*border-top: 1.5px solid #c9c9c9;*/
+    padding: 15px 15px 30px 15px;
+    border-radius: 10px 10px 0 0 ;
+    /*box-shadow: 30px 0 30px #c9c9c9;*/
+} 
+
+.Contact {
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom: 5px;
+}
+
+.FooterSocial {
+    margin: 10px 0;
+}
+
+.Section1, .Section2 {
+    text-align: left;
+}
+
+.Section1 > h4 {
+    margin-top: 10px;
+    margin-bottom: 25px;
+
+}
+
+.Section1 > p {
+    margin-bottom: 10px;
+
+}
+
+.Section1 > a, .Section2 > a {
+    text-decoration: none;
+    color: whitesmoke; 
+}
+
+.FooterSocial img {
+    height: 35px;
+    width: 35px;
+    margin-right: 10px;
+}
+
+.FooterMenu {
+    list-style: none;
+    font-family: "Jost", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-left: 0px;
+}
+
+.FooterMenu li {
+    padding: 10px 0;
+}
+
+.FooterMenu li a {
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 5px;
+    vertical-align: middle;
+  }
+  
+.FooterMenu li a:hover {
+    text-decoration: underline;
+  }
+
+@media (max-width: 767px) {
+    .Section2 {
+      display: none;
+    }
+  }
+
+/* -- Sponsor Page */ 
+
+.ContactUs {
+    background-color: #eceae4;
+    color: black;
+    padding: 30px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContactUs p {
+    margin: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .ContactUs p {
+        text-align: center;
+    }
+  }
+  
+@media (max-width: 767px) {
+    .ContactUs p {
+        text-align: center;
+    }
+  }
+
+
+.ContactMedia {
+    margin: 10px 0;
+}
+
+.ContactMedia img {
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.ContactForm {
+    margin-top: 20px;
+    padding: 0 30px;
+}
