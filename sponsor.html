@@ -3,17 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,
-                                 maximum-scale=1.0, user-scalable=no">
-  <link href="index.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Ojuju:wght@200..800&display=swap"
-    rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="index.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital@0;1&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <script src="index.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <title>
     BenRover-24 : Cars4Mars
   </title>
@@ -21,45 +17,54 @@
 
 <body>
   <header>
-    <div class="container">
-      <nav class="navbar fixed-top navbar-expand-lg bg-dark" data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
+    <nav>
+      <ul class="sidebar">
+        <li onClick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="45px"
+              viewBox="0 -960 960 960" width="45px" fill="#5f6368">
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg></a></li>
+        <li><a href="#AboutProject">Project</a></li>
+        <li><a href="#Goals">Goals & Objectives</a></li>
+        <li><a href="#About the Team">Our Team</a></li>
+        <li><a href="sponsor.html">Sponsor Us</a></li>
+        <hr />
+        <ul class="sidebar-media">
+        <li><a href="https://www.linkedin.com/" target="_blank" id="linkedin"><img
+              src="ressources\images\LinkedIn_logo_initials.png" alt="Linkedin"></a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" id="instagram"><img
+              src="ressources\images\Instagram_icon.png.webp" alt="Instagram"></a></li>
+        <li><a href="https://www.github.com/" target="_blank" id="github"><img src="ressources\images\Github.png"
+          alt="Github"></a></li>
+        </ul>
+      </ul>
+
+      <ul>
+        <li><a class="navbar-brand" href="index.html">
             <h1>BenRover-24</h1>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html#AboutProject">About the Project</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="index.html#Goals">Goals & Objectives</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="index.html#AboutTeam">About the Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="sponsor.html">Sponsor the Team</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Social
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Instagram</a></li>
-                  <li><a class="dropdown-item" href="#">Linkedin</a></li>
-                </ul>
-              </li>
-            </ul>
-            <a class="btn btn-outline-light active" aria-current="page" href="#DonateForm" role="button">Donate</a>
-          </div>
-        </div>
-      </nav>
+          </a></li>
+        <li class="hideOnMobile"><a href="index.html#AboutProject">Project</a></li>
+        <li class="hideOnMobile"><a href="index.html#Goals">Goals & Objectives</a></li>
+        <li class="hideOnMobile"><a href="index.html#About the Team">Our Team</a></li>
+        <li class="hideOnMobile"><a href="sponsor.html">Sponsor Us</a></li>        
+        <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+              height="45px" viewBox="0 -960 960 960" width="45px" fill="#5f6368">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg></a></li>
+      </ul>
+    </nav>
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex'
+      }
+
+      function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none'
+
+      }
+    </script>
 
     </div>
     <div class="hero-sponsor">
@@ -72,53 +77,45 @@
   <div class="main">
     <div class="ContactUs" id="DonateForm">
       <h2>Contact us : </h2>
-      <p>Reach out to our email rogueaeronyc@gmail.com directly or submit an inquiry using the following form. 
+      <p>Reach out to our email tekbotrobotics@gmail.com directly or submit an inquiry using the following form. 
         We will get back to you as soon as possible ! 
       </p>
       <div class="ContactMedia">
-        <a href="https://www.linkedin.com/" target="_blank"><img
-            src="ressources\images\LinkedIn_logo_initials.png" alt="Linkedin"> </a>
-        <a href="https://www.instagram.com/" target="_blank"><img
+        <a href="https://bj.linkedin.com/company/tekbot-robotics" target="_blank"><img
+            src="ressources\images\LinkedIn_logo_initials.png" alt="Linkedin"></a>
+        <a href="https://www.instagram.com/tekbot_/" target="_blank"><img
             src="ressources\images\Instagram_icon.png.webp" alt="Instagram"></a>
-        <a href="https://www.github.com/" target="_blank"><img src="ressources\images\Github.png"
+        <a href="https://benrover-24.github.io/Docs/" target="_blank"><img src="ressources\images\Github.png"
             alt="Github"> </a>
     </div>
 
-      <div class="ContactForm"> 
-        <form class="row g-3 needs-validation" novalidate>
-          <div class="col-md-6 position-relative">
-            <label for="validationTooltip01" class="form-label">First name (required)</label>
-            <input type="text" class="form-control" id="validationTooltip01" required>
-            <div class="valid-tooltip">
-              Looks good!
-            </div>
+    <!-- Form  -->
+      <div class="contact-form">
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
           </div>
-          <div class="col-md-6 position-relative">
-          
-            <label for="validationTooltip02" class="form-label">Last name (required)</label>
-            <input type="text" class="form-control" id="validationTooltip02" required>
-            <div class="valid-tooltip">
-              Looks good!
-            </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
           </div>
-          <div class="col-md-12 position-relative">
-            <label for="validationTooltipMail" class="form-label">Email address (required)</label>
-            <input type="email" class="form-control" id="validationTooltipMail" placeholder="name@example.com" required>
-            <div class="input-group has-validation">
-              <div class="invalid-tooltip">
-                Please choose a unique and valid username.
-              </div>
-            </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
           </div>
-          <div class="col-md-12 position-relative">
-            <label for="exampleFormControlTextarea1" class="form-label">Message (required)</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" required></textarea>          
-          </div> 
-          <div class="col-12">
-            <button class="btn btn-danger" type="submit">Send us a message</button>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
           </div>
-        </form> 
-      </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+        <div id="status"></div>
+      </div>    
 
     </div>
 

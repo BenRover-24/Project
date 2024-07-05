@@ -1,169 +1,107 @@
 // Members data displaying
-const members = await fetch("members.json").then((response) => response.json());
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('members.json')
+    .then(response => response.json())
+    .then(data => {
+      const teamContainer = document.getElementById('team-container');
 
-//const MemberCaroussel1 = document.querySelector("#CardGroup1");
-//const MemberCaroussel2 = document.querySelector("#CardGroup2");
-//const MemberCaroussel3 = document.querySelector("#CardGroup3");
-//const MemberCaroussel4 = document.querySelector("#CardGroup4");
+      data.forEach(member => {
+        const card = document.createElement('div');
+        card.className = 'team-card';
 
-function displayMembers(members) {
-  for (let i = 0; i < members.length; i++) {
-    const Member = members[i];
-    const cardImage = document.querySelectorAll(".card .card-img-top");
-    cardImage.src = Member.image;
-    const cardTitle = document.querySelectorAll(".card .card-title");
-    cardTitle.innerText = Member.name;
-    const cardSubTitle = document.querySelectorAll(".card h6");
-    cardSubTitle.innerText = Member.title;
-    const cardText = document.querySelectorAll(".card .card-text");
-    cardText.innerText = Member.description;
-    const socialMedia1 = document.querySelectorAll(".card #linkedin");
-    socialMedia1.src = Member.social.linkedin;
-    const socialMedia2 = document.querySelectorAll(".card #instagram");
-    socialMedia2.src = Member.social.instagram;
-    const socialMedia3 = document.querySelectorAll(".card #github");
-    socialMedia3.src = Member.social.github;
+        const img = document.createElement('img');
+        img.src = member.image;
+        img.alt = member.name;
 
-    const cardElement = document.createElement("div");
-    cardElement.classList.add("card");
-    cardElement.innerHTML = `
-    <img src="${cardImage}" class="card-img-top" alt="${cardTitle}" />
-    <div class="card-body">
-      <h5 class="card-title">${cardTitle}</h5>
-      <h6> ${cardSubTitle} </h6>
-      <p class="card-text">${cardText}</p>
-      <div class="card-footer">
-      <div class="Connect">
-      <a href="${socialMedia1}" target="_blank" id="linkedin"><img
-      src="ressources/images/LinkedIn_logo_initials.png" alt="Linkedin"/></a>
-      <a href="${socialMedia2}" target="_blank" id="instagram"/><img
-      src="ressources/images/Instagram_icon.png.webp" alt="Instagram"/></a>
-      <a href="${socialMedia3}" target="_blank" id="github"><img src="ressources/images/Github.png"
-      alt="Github"/></a>
-      </div>
-      </div>
-    </div>  `;
-    console.log(cardElement);
-    const cardItem = null
-    if (typeof cardItem === "object" && cardItem !== null && "appendChild" in cardItem) {
-      const cardItem = document.querySelectorAll(".card-group");
-      cardItem.appendChild(cardElement);
-    }
+        const name = document.createElement('h3');
+        name.textContent = member.name;
 
+        const title = document.createElement('h4');
+        title.textContent = member.title;
 
-    /*const cardItem = document.querySelectorAll(".card-group");
+        const description = document.createElement('p');
+        description.textContent = member.description;
 
-    if (typeof cardItem === "object" && cardItem !== null && "appendChild" in cardItem) {
-      const cardElement = document.createElement("div");
-      cardElement.classList.add("card");
-      cardElement.innerHTML = `
-      <img src="${cardImage}" class="card-img-top" alt="${cardTitle}" />
-      <div class="card-body">
-        <h5 class="card-title">${cardTitle}</h5>
-        <h6> ${cardSubTitle} </h6>
-        <p class="card-text">${cardText}</p>
-        <a href="${socialMedia1}" target="_blank" id="linkedin"><img
-        src="ressources/images/LinkedIn_logo_initials.png" alt="Linkedin"/></a>
-        <a href="${socialMedia2}" target="_blank" id="instagram"/><img
-        src="ressources/images/Instagram_icon.png.webp" alt="Instagram"/></a>
-        <a href="${socialMedia3}" target="_blank" id="github"><img src="ressources/images/Github.png"
-        alt="Github"/></a>
-      </div>  `;
-      cardItem.appendChild(cardElement);
-    }*/
+        const socialLinks = document.createElement('div');
+        socialLinks.className = 'social-links';
 
-    /*const cardElement = document.createElement("div");
-    cardElement.classList.add("card");*/
-    /*cardElement.innerHTML = `
-    <img src="${cardImage}" class="card-img-top" alt="${cardTitle}" />
-    <div class="card-body">
-      <h5 class="card-title">${cardTitle}</h5>
-      <h6> ${cardSubTitle} </h6>
-      <p class="card-text">${cardText}</p>
-      <a href="${socialMedia1}" target="_blank" id="linkedin"><img
-      src="ressources/images/LinkedIn_logo_initials.png" alt="Linkedin"/></a>
-      <a href="${socialMedia2}" target="_blank" id="instagram"/><img
-      src="ressources/images/Instagram_icon.png.webp" alt="Instagram"/></a>
-      <a href="${socialMedia3}" target="_blank" id="github"><img src="ressources/images/Github.png"
-      alt="Github"/></a>
-    </div>  `;*/
+        if (member.social.linkedin) {
+          const linkedin = document.createElement('a');
+          linkedin.href = member.social.linkedin;
+          linkedin.target = '_blank';
 
-    //cardItem.appendChild("cardElement");
+          const linkedinImg = document.createElement('img');
+          linkedinImg.src = 'ressources/images/LinkedIn_logo_initials.png';
+          linkedinImg.alt = 'LinkedIn';
 
-    // Ajouter le contenu de la card
-  }
-}
+          linkedin.appendChild(linkedinImg);
+          socialLinks.appendChild(linkedin);
+        }
 
-displayMembers(members);
+        if (member.social.instagram) {
+          const instagram = document.createElement('a');
+          instagram.href = member.social.instagram;
+          instagram.target = '_blank';
 
-//const memberImage = Member.image;
-//const CardImage = document.querySelector(".card");
-//CardImage.appendChild(memberImage);
-/*
+          const instagramImg = document.createElement('img');
+          instagramImg.src = 'ressources/images/Instagram_icon.png.webp';
+          instagramImg.alt = 'Instagram';
+          
+          instagram.appendChild(instagramImg);
+          socialLinks.appendChild(instagram);
+        }
 
-    cardItem.appendChild(cardImage);
-    cardItem.appendChild(cardTitle);
-    cardItem.appendChild(cardSubTitle);
-    cardItem.appendChild(cardText);
-    cardItem.appendChild(socialMedia1);
-    cardItem.appendChild(socialMedia2);
-    cardItem.appendChild(socialMedia3);
+        if (member.social.github) {
+          const github = document.createElement('a');
+          github.href = member.social.github;
+          github.target = '_blank';
 
+          const githubImg = document.createElement('img');
+          githubImg.src = 'ressources/images/Github.png';
+          githubImg.alt = 'GitHub';
+          
+          github.appendChild(githubImg);
+          socialLinks.appendChild(github);
+        }
 
-for (let i = 0; i < members.length; i++) {
-  const Member = members[i];
+        card.appendChild(img);
+        card.appendChild(name);
+        card.appendChild(title);
+        card.appendChild(description);
+        card.appendChild(socialLinks);
 
-  const cardItem = document.querySelector(".card-grp");
-  const card = document.createElement("div");
-  const cardImage = document.createElement("img");
-  cardImage.src = Member.image;
-  const cardTitle = document.createElement("h5");
-  cardTitle.innerText = Member.name;
-  const cardSubTitle = document.createElement("h6");
-  cardSubTitle.innerText = Member.title;
-  const cardText = document.createElement("p"); 
-  cardText.innerText = Member.description;
-  const socialMedia1 = document.createElement("a");
-  socialMedia1.innerText = Member.social.linkedin;
-  const socialMedia2 = document.createElement("a");
-  socialMedia2.innerText = Member.social.instagram;
-  const socialMedia3 = document.createElement("a");
-  socialMedia3.innerText = Member.social.github;
+        teamContainer.appendChild(card);
+      });
+    })
+    .catch(error => console.error('Error fetching team data:', error));
+});
 
-  cardItem.appendChild(card);
-  card.appendChild(cardImage);
-  card.appendChild(cardTitle);
-  card.appendChild(cardSubTitle);
-  card.appendChild(cardText);
-  card.appendChild(socialMedia1);
-  card.appendChild(socialMedia2);
-  card.appendChild(socialMedia3);
-}
 
 // Form submission for sponsor page
 
-const forms = document.querySelector("#DonateForm");
-forms.event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+  emailjs.init("YOUR_USER_ID"); // Remplacez "YOUR_USER_ID" par votre ID utilisateur EmailJS
 
-(() => {
-  "use strict";
+  const contactForm = document.getElementById('contact-form');
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll(".needs-validation");
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-  // Loop over them and prevent submission
-  Array.from(forms).forEach((form) => {
-    form.addEventListener(
-      "submit",
-      (event) => {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
+    const formData = {
+      firstName: contactForm.firstName.value,
+      lastName: contactForm.lastName.value,
+      subject: contactForm.subject.value,
+      email: contactForm.email.value,
+      message: contactForm.message.value
+    };
 
-        form.classList.add("was-validated");
-      },
-      false
-    );
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData)
+      .then(function(response) {
+        document.getElementById('status').textContent = "Message envoyé avec succès!";
+        contactForm.reset();
+      }, function(error) {
+        document.getElementById('status').textContent = "Erreur lors de l'envoi du message.";
+        console.error("Error:", error);
+      });
   });
-})();*/
+});

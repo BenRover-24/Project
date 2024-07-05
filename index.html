@@ -3,16 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,
-                                 maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="index.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Ojuju:wght@200..800&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital@0;1&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
   <title>
     BenRover-24 : Cars4Mars
   </title>
@@ -20,50 +15,60 @@
 
 <body>
   <header>
-      <nav class="navbar sticky-top navbar-expand-lg bg-dark" data-bs-theme="dark"> 
-        <div class="container-fluid">
-          <a class="navbar-brand active" aria-current="page" href="index.html">
+    <nav>
+      <ul class="sidebar">
+        <li onClick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="45px"
+              viewBox="0 -960 960 960" width="45px" fill="#5f6368">
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg></a></li>
+        <li><a href="#AboutProject">Project</a></li>
+        <li><a href="#Goals">Goals & Objectives</a></li>
+        <li><a href="#About the Team">Our Team</a></li>
+        <li><a href="sponsor.html">Sponsor Us</a></li>
+        <hr />
+        <ul class="sidebar-media">
+        <li><a href="https://www.linkedin.com/" target="_blank" id="linkedin"><img
+              src="ressources\images\LinkedIn_logo_initials.png" alt="Linkedin"></a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" id="instagram"><img
+              src="ressources\images\Instagram_icon.png.webp" alt="Instagram"></a></li>
+        <li><a href="https://www.github.com/" target="_blank" id="github"><img src="ressources\images\Github.png"
+          alt="Github"></a></li>
+        </ul>
+      </ul>
+
+      <ul>
+        <li><a class="navbar-brand" href="index.html">
             <h1>BenRover-24</h1>
-          </a>
-          <button class="navbar-toggler ml-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button> 
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
-                <a class="nav-link" href="#AboutProject">About the Project</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Goals">Goals & Objectives</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#AboutTeam">About the Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sponsor.html">Sponsor the Team</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Social
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Instagram</a></li>
-                  <li><a class="dropdown-item" href="#">Linkedin</a></li>
-                </ul>
-              </li>
-            </ul>
-            <a class="btn btn-outline-light" href="sponsor.html" role="button">Donate</a>
-          </div>
-        </div>
-      </nav>
+          </a></li>
+        <li class="hideOnMobile"><a href="#AboutProject">Project</a></li>
+        <li class="hideOnMobile"><a href="#Goals">Goals & Objectives</a></li>
+        <li class="hideOnMobile"><a href="#About the Team">Our Team</a></li>
+        <li class="hideOnMobile"><a href="sponsor.html">Sponsor Us</a></li>        
+        <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+              height="45px" viewBox="0 -960 960 960" width="45px" fill="#5f6368">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg></a></li>
+      </ul>
+    </nav>
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex'
+      }
+
+      function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none'
+
+      }
+    </script>
 
     <div class="hero">
       <div class="hero-text">
         <h1> Rover for Martian environment mission</h1>
-        <h3>The Rover design & build in Benin </h3>
-        <a class="btn btn-danger" href="#AboutProject" role="button">Discover</a>
+        <h3>A Rover design & build in Benin </h3>
+        <button type="button"><a class="btn btn-danger" href="#AboutProject" role="button">Discover</a></button>
       </div>
     </div>
   </header>
@@ -76,9 +81,11 @@
           <img src="ressources/images/mars-glace-carte-canonqie.jpg" alt="Hero - Mars " />
           <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars " />
           <p>
-            This project has been built by a team of young Benin Engineers and Students as part of AFRICAN ROVER CHALLENGE. <br> The challenge is to design and build a Mars rover prototype. This is not expected to be a space-grade machine and does not need to be ready to operate in actual space or Mars conditions.
+            This project has been built by a team of young Benin Engineers and Students as part of AFRICAN ROVER
+            CHALLENGE. <br> The challenge is to design and build a Mars rover prototype. This is not expected to be a
+            space-grade machine and does not need to be ready to operate in actual space or Mars conditions.
 
-            It should be a small, mobile robot, controlled wirelessly and have an independent power source.
+            It's a small, mobile robot, controlled wirelessly with an independent power source.
           </p>
         </div>
 
@@ -89,39 +96,43 @@
           <div>
             <img src="ressources/images/Cars4Mars-Home-1536x864.png" alt="Hero - Mars " />
             <p>
-              The competition is a continuous mentoring effort which is intended to educate the next generation of 
-              multidisciplinary engineers and others, boost innovation in research and business, and popularise STEM (Science, Technology, Engineering and Mathematics) advancements.
+              The competition is a continuous mentoring effort which is intended to educate the next generation of
+              multidisciplinary engineers and others, boost innovation in research and business, and popularise STEM
+              (Science, Technology, Engineering and Mathematics) advancements.
             </p>
           </div>
           <div class="GoalsDescription">
             <p>
-              The excitement in participating in this competition will enable students to learn and 
+              The excitement in participating in this competition will enable students to learn and
               use their creativity building robots and opportunity to interact on many levels with others.
             </p>
-            <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars " />
+            <img src="ressources\images\black-teacher-using-robot-arm-explaining-engineering-students.jpg" alt="Hero - Mars " />
             <p>
-              Inspiring African youth to be part of the Robotics, Space Technologies, and AI rush to conquer the world and outer space. 
+              Inspiring African youth to be part of the Robotics, Space Technologies, and AI rush to conquer the world
+              and outer space.
             </p>
-            </div>
+          </div>
         </div>
         <div class="AboutMars">
           <h2>About the Planet</h2>
           <div class="mars-image">
             <div>
-            <img src="ressources/images/MarsImageForNews_12655_1639495090990810.webp" alt="Mars">   
-          </div>       
-            <div class="mars-text">          
+              <img src="ressources/images/MarsImageForNews_12655_1639495090990810.webp" alt="Mars">
+            </div>
+            <div class="mars-text">
               <h4>
                 MARS
-              </h4>       
-              <br/>   
+              </h4>
+              <br />
               <p>
-                At an average distance of 140 million miles, Mars is one of Earth's closest habitable neighbors. 
-                Mars is about half again as far from the Sun as Earth is, so it still has decent sunlight. 
-                It is a little cold, but we can warm it up. 
-                Its atmosphere is primarily CO2 with some nitrogen and argon and a few other trace elements, which means that we can grow plants on Mars just by compressing the atmosphere. 
-                Gravity on Mars is about 38% of that of Earth, so you would be able to lift heavy things and bound around. Furthermore, the day is remarkably close to that of Earth.
-              </p>  
+                At an average distance of 140 million miles, Mars is one of Earth's closest habitable neighbors.
+                Mars is about half again as far from the Sun as Earth is, so it still has decent sunlight.
+                It is a little cold, but we can warm it up.
+                Its atmosphere is primarily CO2 with some nitrogen and argon and a few other trace elements, which means
+                that we can grow plants on Mars just by compressing the atmosphere.
+                Gravity on Mars is about 38% of that of Earth, so you would be able to lift heavy things and bound
+                around. Furthermore, the day is remarkably close to that of Earth.
+              </p>
               <table class="data animate">
                 <tbody>
                   <tr>
@@ -145,158 +156,76 @@
                     <td>4.5 billion years</td>
                   </tr>
                 </tbody>
-              </table>        
-              </div>
-          </div>          
+              </table>
+            </div>
+          </div>
         </div>
       </div>
       <div class="AboutTeam" id="AboutTeam">
-        <h2> About the Team </h2>
+        <h2> Our Team </h2>
         <p class="TeamDescription">
           A Multidisciplianry, skillful and passionate team from Electronics, to IT, Mechanics and Space
           Science
         </p>
-        <div class="TeamMember">
-          <div class="MemberCaroussel">
-            <div class="card-group">
-              <div class="card">
-                <img src="ressources/images/MarsImageForNews_12655_1639495090990810.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"> </h5>
-                  <h6> Maker & Fablab Manager </h6>
-                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?</p>
-                </div>
-                <div class="card-footer">
-                    <a href="https://www.linkedin.com/" target="_blank" id="linkedin"><img
-                        src="ressources\images\LinkedIn_logo_initials.png" alt="Linkedin"></a>
-                    <a href="https://www.instagram.com/" target="_blank" id="instagram"><img
-                        src="ressources\images\Instagram_icon.png.webp" alt="Instagram"></a>
-                    <a href="https://www.github.com/" target="_blank" id="github"><img src="ressources\images\Github.png"
-                        alt="Github"></a>
-                </div>
-              </div>
-              <div class="card">
-                <img src="ressources/images/MarsImageForNews_12655_1639495090990810.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Mohamed SALIFOU</h5>
-                  <h6> Maker & Fablab Manager </h6>
-                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?</p>
-                </div>
-                <div class="card-footer">
-                  <div class="Connect">
-                    <a href="https://www.linkedin.com/" target="_blank"><img
-                        src="ressources\images\LinkedIn_logo_initials.png" alt="Linkedin"></a>
-                    <a href="https://www.instagram.com/" target="_blank"><img
-                        src="ressources\images\Instagram_icon.png.webp" alt="Instagram"></a>
-                    <a href="https://www.github.com/" target="_blank"><img src="ressources\images\Github.png"
-                        alt="Github"></a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="ressources/images/MarsImageForNews_12655_1639495090990810.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Mohamed SALIFOU</h5> 
-                  <h6> Maker & Fablab Manager </h6>
-                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?</p>
-                </div>
-                <div class="card-footer">
-                  <div class="Connect">
-                    <a href="https://www.linkedin.com/" target="_blank"><img
-                        src="ressources\images\LinkedIn_logo_initials.png" alt="Linkedin"></a>
-                    <a href="https://www.instagram.com/" target="_blank"><img
-                        src="ressources\images\Instagram_icon.png.webp" alt="Instagram"></a>
-                    <a href="https://www.github.com/" target="_blank"><img src="ressources\images\Github.png"
-                        alt="Github"></a>
-                  </div>
-                </div>
-              </div> 
-              <div class="card">
-                <img src="ressources/images/MarsImageForNews_12655_1639495090990810.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Mohamed SALIFOU</h5> 
-                  <h6> Maker & Fablab Manager </h6>
-                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?</p>
-                </div>
-                <div class="card-footer">
-                  <div class="Connect">
-                    <a href="https://www.linkedin.com/" target="_blank"><img
-                        src="ressources\images\LinkedIn_logo_initials.png" alt="Linkedin"></a>
-                    <a href="https://www.instagram.com/" target="_blank"><img
-                        src="ressources\images\Instagram_icon.png.webp" alt="Instagram"></a>
-                    <a href="https://www.github.com/" target="_blank"><img src="ressources\images\Github.png"
-                        alt="Github"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-              
-            </div>
-
-          </div>
-        </div>
-        <div class="Sponsor" id="Sponsor">
-          <h2>Sponsor the Team</h2>
-          <div class="SponsorContent">
-            <img src="ressources/images/Mars-rover-competition.jpg" alt="Hero - Mars ">
-            <div class="CallSponsors">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere autem itaque recusandae
-                exercitationem modi repellendus expedita, nulla consectetur tempora animi at. Ratione
-                voluptatem
-                illum sapiente consequuntur non, maiores sed aut?
-              </p>
-              <br />
-              <a class="btn btn-danger" href="sponsor.html" role="button">Sponsor Us</a>
-            </div>
-          </div>
-          <p class="Description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
-            autem itaque recusandae exercitationem modi repellendus
-            expedita, nulla consectetur tempora animi at. Ratione voluptatem
-            illum sapiente consequuntur non, maiores sed aut?
-          </p>
-          <div class="OurSponsors">
-            <h3>
-              Our Sponsors & Donors
-            </h3>
-            <div class="SponsorContainer">
-              <div class="sponsor-image">
-                <img src="ressources/images/Tekbot.jpg" alt="Tekbot">
-              </div>
-              <div class="sponsor-image">
-                <img src="ressources/images/Sèmè_City.webp" alt="Linkedin">
-              </div>
-              <div class="sponsor-image">
-                <img src="ressources/images/SCOP.jpg" alt="Linkedin">
-              </div>
-              <div class="sponsor-image">
-                <img src="ressources/images/Tekbot.jpg" alt="Tekbot">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="Media">
-          <h2>Medias</h2>
-          <div class="RefDoc">
-            <h5>Our Open Source Technical Documentation </h5>
-              <a class="btn btn-outline-light" href="https://benrover-24.github.io/Docs/" role="button" target="_blank">Explore</a>
-          </div>
-          <div class="Medias">
-            <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars ">
-            <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars ">
-            <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars ">
-            <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars ">
-            <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars ">
-            <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars ">
-            <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars ">
-            <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars ">
-          </div>
-        </div>
-
+        <div id="team-container" class="team-container"></div>
       </div>
+      <div class="Sponsor" id="Sponsor">
+        <h2>Sponsor Us</h2>
+        <div class="SponsorContent">
+          <img src="ressources/images/Mars-rover-competition.jpg" alt="Hero - Mars ">
+          <div class="CallSponsors">
+            <p>
+              Our BenRover-24 project represents not only an incredible opportunity for our team of passionate students to put our engineering and science skills into practice, but also a platform for demonstrating our passion for technology and innovation. 
+              By becoming our sponsor, you can help us turn this vision into reality and encourage innovation. 
+              Be part of this exciting adventure and leave your mark on Benin's educational and scientific landscape.
+            </p>
+            <br />
+            <button type="button" class="button3"><a href="sponsor.html">Sponsor Us</a></button>            
+          </div>
+        </div>
+        <p class="Description">
+          Join us, and together we'll drive science and innovation forward. Thank you for your support.        </p>
+        <div class="OurSponsors">
+          <h3>
+            Our Sponsors & Donors
+          </h3>
+          <div class="SponsorContainer">
+            <div class="sponsor-image">
+              <img src="ressources/images/Tekbot.jpg" alt="Tekbot">
+            </div>
+            <div class="sponsor-image">
+              <img src="ressources/images/Sèmè_City.webp" alt="Linkedin">
+            </div>
+            <div class="sponsor-image">
+              <img src="ressources/images/SCOP.jpg" alt="Linkedin">
+            </div>
+            <div class="sponsor-image">
+              <img src="ressources/images/Tekbot.jpg" alt="Tekbot">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="Media">
+        <h2>Medias</h2>
+        <div class="RefDoc">
+          <p>Our Open Source Technical Documentation</p>
+          <button type="button" class="button3"><a href="https://benrover-24.github.io/Docs/" target="_blank">Explore</a></button>          
+        </div>
+        <div class="Medias">
+          <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars ">
+          <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars ">
+          <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars ">
+          <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars ">
+          <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars ">
+          <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars ">
+          <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars ">
+          <img src="ressources\images\MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif" alt="Hero - Mars ">
+        </div>
+      </div>
+
     </div>
+  </div>
   </div>
 
   <footer>
@@ -305,17 +234,19 @@
       <h4>
         Powered by Tekbot Robotics
       </h4>
-      <h5 class="Contact">
+      <h4 class="Contact">
         Contact
       </h5>
-      <p>6 Metrotech Center, Brooklyn, NY </p>
-      <a href="mailto:">tekbotrobotics@gmail.com </a>
+      <p>
+        Cotonou, en face de l'Ecole Montaigne </p>
+      <a href="mailto:">mohamed.salifou@tekbot.io </a>
       <div class="FooterSocial">
-        <a href="https://www.linkedin.com/" target="_blank"><img src="ressources\images\LinkedIn_logo_initials.png"
-            alt="Linkedin"></a>
-        <a href="https://www.instagram.com/" target="_blank"><img src="ressources\images\Instagram_icon.png.webp"
-            alt="Instagram"></a>
-        <a href="https://www.github.com/" target="_blank"> <img src="ressources\images\Github.png" alt="Github"></a>
+        <a href="https://bj.linkedin.com/company/tekbot-robotics" target="_blank"><img
+            src="ressources\images\LinkedIn_logo_initials.png" alt="Linkedin"></a>
+        <a href="https://www.instagram.com/tekbot_/" target="_blank"><img
+            src="ressources\images\Instagram_icon.png.webp" alt="Instagram"></a>
+        <a href="https://benrover-24.github.io/Docs/" target="_blank"> <img src="ressources\images\Github.png"
+            alt="Github"></a>
       </div>
     </div>
     <div class="Section2">
@@ -323,16 +254,16 @@
       <br />
       <ul class="FooterMenu">
         <li>
-          <a href="#AboutProject"> About the project</a>
+          <a href="#AboutProject"> Project</a>
         </li>
         <li>
           <a href="#Goals"> Goals & Objectives </a>
         </li>
         <li>
-          <a href="#AboutTeam"> About the Team </a>
+          <a href="#AboutTeam"> Our Team </a>
         </li>
         <li>
-          <a href="#Sponsor"> Sponsor the Team </a>
+          <a href="sponsor.html"> Sponsor Us </a>
         </li>
       </ul>
     </div>

@@ -1,12 +1,16 @@
 [
     {
-        "id": 1, 
-        "image": "ressources/images/MjAyMTAyMDJmNTdjNGY4NmJlZTQ2Y2U1MmExNzJmNjQ3ZmYzMzA.avif",
+        "image": "ressources/images/members/prudence_ayivi.jpg",
         "name": "Mohamed SALIFOU",
         "title": "Maker & Fablab Manager", 
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
+        "socialImage": {            
+            "linkedin": "ressources/images/LinkedIn_logo_initials.png",
+            "instagram": "ressources/images/Instagram_icon.png.webp",
+            "github": "ressources/images/Github.png"
+        },
         "social" : {
-            "linkedin": "https://www.linkedin.com/prudence-ayivi",
+            "linkedin": "https://www.linkedin.com/",
             "instagram": "https://www.instagram.com/",
             "github": "https://www.github.com/"
 
@@ -14,8 +18,20 @@
     },
 
     {
-        "id": 1,
-        "image": "ressources/images/MarsImageForNews_12655_1639495090990810.webp",
+        "image": "ressources/images/members/prudence_ayivi.jpg",
+        "name": "Prudence AYIVI",
+        "title": "Space Science Specialist", 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
+        "social" : {
+            "linkedin": "hhttps://www.linkedin.com/prudence-ayivi",
+            "instagram": "https://www.instagram.com/",
+            "github": "https://www.github.com/"
+
+        }
+    },
+
+    {
+        "image": " ressources/images/members/prudence_ayivi.jpg",
         "name": "Mohamed SALIFOU",
         "title": "Maker & Fablab Manager", 
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
@@ -28,8 +44,7 @@
     },
 
     {
-        "id": 1,
-        "image": "ressources/images/MarsImageForNews_12655_1639495090990810.webp",
+        "image": " ressources/images/members/prudence_ayivi.jpg",
         "name": "Mohamed SALIFOU",
         "title": "Maker & Fablab Manager", 
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
@@ -42,8 +57,7 @@
     },
 
     {
-        "id": 1,
-        "image": "ressources/images/MarsImageForNews_12655_1639495090990810.webp",
+        "image": " ressources/images/members/prudence_ayivi.jpg",
         "name": "Mohamed SALIFOU",
         "title": "Maker & Fablab Manager", 
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
@@ -56,8 +70,19 @@
     },
 
     {
-        "id": 1,
-        "image": "ressources/images/MarsImageForNews_12655_1639495090990810.webp",
+        "image": " ressources/images/members/prudence_ayivi.jpg",
+        "name": "Mohamed SALIFOU",
+        "title": "Maker & Fablab Manager", 
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
+        "social" : {
+            "linkedin": "https://www.linkedin.com/",
+            "instagram": "https://www.instagram.com/",
+            "github": "https://www.github.com/"
+
+        }
+    },
+    {
+        "image": " ressources/images/members/prudence_ayivi.jpg",
         "name": "Mohamed SALIFOU",
         "title": "Maker & Fablab Manager", 
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
@@ -70,21 +95,7 @@
     },
 
     {
-        "id": 1,
-        "image": "ressources/images/MarsImageForNews_12655_1639495090990810.webp",
-        "name": "Mohamed SALIFOU",
-        "title": "Maker & Fablab Manager", 
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
-        "social" : {
-            "linkedin": "https://www.linkedin.com/",
-            "instagram": "https://www.instagram.com/",
-            "github": "https://www.github.com/"
-
-        }
-    },
-    {
-        "id": 1,
-        "image": "ressources/images/MarsImageForNews_12655_1639495090990810.webp",
+        "image": " ressources/images/members/prudence_ayivi.jpg",
         "name": "Mohamed SALIFOU",
         "title": "Maker & Fablab Manager", 
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
@@ -97,8 +108,7 @@
     },
 
     {
-        "id": 1,
-        "image": "ressources/images/MarsImageForNews_12655_1639495090990810.webp",
+        "image": " ressources/images/members/prudence_ayivi.jpg",
         "name": "Mohamed SALIFOU",
         "title": "Maker & Fablab Manager", 
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
@@ -111,8 +121,7 @@
     },
 
     {
-        "id": 1,
-        "image": "ressources/images/MarsImageForNews_12655_1639495090990810.webp",
+        "image": " ressources/images/members/prudence_ayivi.jpg",
         "name": "Mohamed SALIFOU",
         "title": "Maker & Fablab Manager", 
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
@@ -125,8 +134,7 @@
     },
 
     {
-        "id": 1,
-        "image": "ressources/images/MarsImageForNews_12655_1639495090990810.webp",
+        "image": " ressources/images/members/prudence_ayivi.jpg",
         "name": "Mohamed SALIFOU",
         "title": "Maker & Fablab Manager", 
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
@@ -139,8 +147,7 @@
     },
 
     {
-        "id": 1,
-        "image": "ressources/images/MarsImageForNews_12655_1639495090990810.webp",
+        "image": " ressources/images/members/prudence_ayivi.jpg",
         "name": "Mohamed SALIFOU",
         "title": "Maker & Fablab Manager", 
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
@@ -153,8 +160,7 @@
     },
 
     {
-        "id": 1,
-        "image": "ressources/images/MarsImageForNews_12655_1639495090990810.webp",
+        "image": " ressources/images/members/prudence_ayivi.jpg",
         "name": "Mohamed SALIFOU",
         "title": "Maker & Fablab Manager", 
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
@@ -167,22 +173,7 @@
     },
 
     {
-        "id": 1,
-        "image": "ressources/images/MarsImageForNews_12655_1639495090990810.webp",
-        "name": "Mohamed SALIFOU",
-        "title": "Maker & Fablab Manager", 
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
-        "social" : {
-            "linkedin": "https://www.linkedin.com/",
-            "instagram": "https://www.instagram.com/",
-            "github": "https://www.github.com/"
-
-        }
-    },
-
-    {
-        "id": 1,
-        "image": "ressources/images/MarsImageForNews_12655_1639495090990810.webp",
+        "image": " ressources/images/members/prudence_ayivi.jpg",
         "name": "Mohamed SALIFOU",
         "title": "Maker & Fablab Manager", 
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
@@ -195,8 +186,7 @@
     }, 
 
     {
-        "id": 1,
-        "image": "ressources/images/MarsImageForNews_12655_1639495090990810.webp",
+        "image": " ressources/images/members/prudence_ayivi.jpg",
         "name": "Mohamed SALIFOU",
         "title": "Maker & Fablab Manager", 
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
@@ -209,8 +199,7 @@
     }, 
 
     {
-        "id": 1,
-        "image": "ressources/images/MarsImageForNews_12655_1639495090990810.webp",
+        "image": " ressources/images/members/prudence_ayivi.jpg",
         "name": "Mohamed SALIFOU",
         "title": "Maker & Fablab Manager", 
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",

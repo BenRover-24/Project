@@ -3,37 +3,169 @@
     margin: 0px;
 }
 
-h1, h2 {
-    font-family: "Ojuju", sans-serif;
-    font-weight: 800;
-    font-size: 1.5rem;
-    
-}
-
-h3, h4 {
-    font-family: "Jost", sans-serif;  
-    font-weight: 600;
-}
-
-p {
-    font-family: "Jost", sans-serif;
-    font-weight: 400;
-}
-
 body {
+    min-height: 100vh;
     background-color: black;
     color: #fff;
 }
 
-.navbar.navbar {
-    padding: 5px 25px;
+h1, h2 {
+    font-family: "Playwrite GB S", sans-serif;
+    font-weight: 800;
+    font-size: 2rem;        
+}
+
+h3, h4, h5, h6 {
+    font-family: "Quicksand", sans-serif;  
+    font-weight: 600;
+}
+
+p, table, a, label, textarea, input, button {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+}
+
+ul {
+    padding-left: 0px;
+}
+
+button {
+  border: none;
+  background-color: rgb(253, 76, 76);
+  color: #fff;
+  padding: 12px 25px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+button:hover {
+    background-color: rgba(253, 76, 76, 0.708);    
+  }
+
+button a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button3 {
+    padding: 12px 15px;
+    border-radius: 10px;
+}
+
+
+/* Navber */
+
+nav {
+    padding: 12px 15px;
     border-bottom: 1.5px solid #fff; 
-    border-radius: 0px 0px 10px 10px;   
+    border-radius: 0px 0px 10px 10px;     
 } 
 
-#navbarNav {
-    margin-bottom: 0px;
+@media (max-width: 767px) {
+    nav h1 {
+        font-size: 1.5rem
+    }; 
 }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;  
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+nav a:hover {
+    color: grey;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 90vh;
+    width: 225px;
+    padding-left: 0px;
+    z-index: 5;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.326);
+    box-shadow: -10px 0px 10px rgba(66, 64, 64, 0.3); 
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 15px 0 0 15px;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar-media {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px 10px;
+}
+
+.sidebar-media a {
+    padding: 0 10px;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+hr {
+    color: antiquewhite;
+    line-height: 5px;
+    width: 90%;
+    margin: 5px 10px;
+}
+
+nav a img {
+    height: 40px;
+    width: 40px;
+}
+
+@media(max-width: 869px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+/* Hero */
 
 .hero {
     background-image: url("ressources/images/iStock-1365125708-scaled.jpg");
@@ -43,7 +175,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover; 
     position: relative;
-
 }
 
 .hero-text {
@@ -55,17 +186,98 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.hero-text > h1 {
+    padding-bottom: 30px;
+}
+
+.hero-text > h3 {
+    padding-bottom: 30px;
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
     .hero, .hero-sponsor {
-        height: 50vh;
+        height: 65vh;
     }
-  }
+}
   
 @media (max-width: 767px) {
     .hero, .hero-sponsor {
-        height: 50vh;
+        height: 65vh;
     }
+    .hero-text {
+        text-align: left;
+        transform: translate(-40%, -50%);           
+    }
+    .hero-text h1 {
+        font-size: 1.5rem
+    }; 
+}
+
+/*-- Team Section - with card -- */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 5px;
   }
+  
+.team-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    width: 230px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(191, 189, 189, 0.961);
+  }
+  
+  .team-card img {
+    border-radius: 10px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .team-card h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: black;
+  }
+
+  .team-card h4 {
+    margin: 10px 0px;
+    font-size: 1em;
+    color: black;
+  }
+  
+  .team-card p {
+    font-size: 1em;
+    color: #555;
+  }
+
+  .team-card .social-links {
+    margin: 5px 0;
+    border-top: 1px solid gray;
+    padding-top: 8px; 
+  }
+  
+  .team-card .social-links a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #007bff;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  }
+    
+  .team-card .social-links a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+/* -- End of team section --/
+
 
 /* -- Sponsor -- */ 
 .hero-sponsor {
@@ -88,23 +300,58 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.hero-text-sponsor > h1 {
+.hero-text-sponsor h1 {
     font-size: 3rem;
 }
 
-/*---------------*/
-
-.hero-text > h1, h3 {
-    padding-bottom: 30px;
+/*-- Sponsor page form -- */ 
+  .contact-form {
+    margin: 15px 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+  }
+  
+@media (max-width: 767px) {
+    .contact-form {
+        width: 300px;
+    }
 }
 
-
-.hero-text > .btn { 
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  #contact-form button {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;   
+  }
+  
+  #status {
+    font-family: "Quicksand";
     margin-top: 10px;
-    padding: 8px 25px;
-    border-radius: 30px;
+    font-size: 0.9em;
+  }
 
-}
+/* -- End -- */
+
+/*------- Home page content --------*/
 
 .main > .container-fluid { 
         background-color: black;
@@ -155,7 +402,7 @@ body {
 }
 
 .GoalsContent > div:first-of-type, .mars-image > div:first-of-type {
-    flex: 3;
+    flex: 2.5;
     margin-right: 10px;
 }
 
@@ -168,7 +415,7 @@ body {
 }
 
 .GoalsDescription, .mars-text {
-    flex: 1.5;
+    flex: 2;
 }
 
 .GoalsDescription > img {
@@ -221,6 +468,11 @@ table.data td span {
     color: #868686;
 }
 
+.TeamDescription {
+    text-align: center;
+    margin: 15px 0;
+}
+
 /* -- Responsive -- */ 
 @media (min-width: 768px) and (max-width: 991px) {
     .GoalsContent > div:first-of-type, .mars-image > div:first-of-type {
@@ -247,36 +499,6 @@ table.data td span {
         text-align: center;
     }
   }
-
-.TeamDescription {
-    text-align: center;
-    margin: 15px;
-}
-
-
-.card-body > h5, h6 {
-    text-align: center;
-}
-
-.card-body p {
-    text-align: justify;
-}
-
-.card-footer {
-    display: flex;
-    justify-content: center;
-    /*margin: 5px 0 10px 0;*/
-}
-
-.card-footer img {
-    height: 35px;
-    width: 35px;
-    align-items: center;
-    margin-right: 10px;
-    /*margin-top: 5px; */
-    border-radius: 5px;
-}
-
 
 .SponsorContent > img {
     flex: 3;
@@ -359,12 +581,10 @@ table.data td span {
     align-items: center;
     justify-content: center;
     margin: 15px 0;
-    font-style: italic;
 }
-.RefDoc a {
-    margin-left: 10px;
-    vertical-align: middle;
 
+.RefDoc p {
+    margin-right: 10px;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -407,7 +627,7 @@ footer {
 
 .Section1 > h4 {
     margin-top: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 13px;
 
 }
 
