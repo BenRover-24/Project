@@ -32,13 +32,13 @@
 
     {
         "image": " ressources/images/members/prudence_ayivi.jpg",
-        "name": "Mohamed SALIFOU",
-        "title": "Maker & Fablab Manager", 
+        "name": "GOUNON Eliakim",
+        "title": "AI Specialist", 
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
         "social" : {
-            "linkedin": "https://www.linkedin.com/",
-            "instagram": "https://www.instagram.com/",
-            "github": "https://www.github.com/"
+            "linkedin": "https://www.linkedin.com/in/eliakim-celeste-0a791b275/",
+            "instagram": "https://www.instagram.com/eliakim_celeste/",
+            "github": "https://www.github.com/eliakimceleste"
 
         }
     },
