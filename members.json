@@ -44,14 +44,14 @@
     },
 
     {
-        "image": " ressources/images/members/prudence_ayivi.jpg",
-        "name": "Mohamed SALIFOU",
-        "title": "Maker & Fablab Manager", 
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur beatae neque quisquam expedita libero asperiores, fugit iusto officia facere magnam porro?",
+        "image": " ressources/images/members/judicael_mahoukpe_adikpeto.jpg",
+        "name": "ADIKPETO Mahoukpè Judicaël",
+        "title": "Telecoms and ICT Engineering Technician", 
+        "description": "Patient, Undecided, Resilient, Passionate, Multipurpose",
         "social" : {
-            "linkedin": "https://www.linkedin.com/",
-            "instagram": "https://www.instagram.com/",
-            "github": "https://www.github.com/"
+            "linkedin": "https://www.linkedin.com/in/judica%C3%ABl-mahoukp%C3%A8-adikpeto-40411120b/",
+            "instagram": "https://www.instagram.com/iudhaeladikpeto/",
+            "github": "https://github.com/iudhael/"
 
         }
     },
